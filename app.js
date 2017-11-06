@@ -14,10 +14,11 @@ const printBoard = (board) => {
     if(i !== 2) console.log('______')
   }
 }
-const clearBoard = (board, turn) => {
-  console.log('Board Clearing...')
+const clearBoard = () => {
   board = [[0,1,2],[3,4,5],[6,7,8]]
   turn = true
+  console.log(`Here's your new Board`)
+  printBoard(board)
 }
 const place = (x) => {
   var i = Math.floor(x / 3)
@@ -43,68 +44,73 @@ console.log('X goes first, have fun!')
 const checkWin = (arr) => {
   if(arr[0][0]+arr[0][1]+arr[0][2] === 30) {
     console.log(`X wins! Clearing Board for new game`)
-    clearBoard(board)
+    clearBoard()
   }
     if(arr[1][0]+arr[1][1]+arr[1][2] === 30) {
     console.log(`X wins! Clearing Board for new game`)
-    clearBoard(board)
+    clearBoard()
   }
     if(arr[2][0]+arr[2][1]+arr[2][2] === 30) {
     console.log(`X wins! Clearing Board for new game`)
-    clearBoard(board)
+    clearBoard()
   }
+  
     if(arr[0][0]+arr[1][0]+arr[1][0] === 30) {
     console.log(`X wins! Clearing Board for new game`)
-    clearBoard(board)
+    clearBoard()
   }
     if(arr[0][1]+arr[1][1]+arr[2][1] === 30) {
     console.log(`X wins! Clearing Board for new game`)
-    clearBoard(board)
+    clearBoard()
   }
-    if(arr[0][2]+arr[0][2]+arr[0][2] === 30) {
+    if(arr[0][2]+arr[1][2]+arr[2][2] === 30) {
     console.log(`X wins! Clearing Board for new game`)
-    clearBoard(board)
+    clearBoard()
   }
+  
     if(arr[0][0]+arr[1][1]+arr[2][2] === 30) {
     console.log(`X wins! Clearing Board for new game`)
-    clearBoard(board)
+    clearBoard()
   }
     if(arr[0][2]+arr[1][1]+arr[2][0] === 30) {
     console.log(`X wins! Clearing Board for new game`)
-    clearBoard(board)
+    clearBoard()
   }
   //
     if(arr[0][0]+arr[0][1]+arr[0][2] === 300) {
     console.log(`O wins! Clearing Board for new game`)
-    clearBoard(board)
+    clearBoard()
   }
     if(arr[1][0]+arr[1][1]+arr[1][2] === 300) {
     console.log(`O wins! Clearing Board for new game`)
-    clearBoard(board)
+    clearBoard()
   }
     if(arr[2][0]+arr[2][1]+arr[2][2] === 300) {
     console.log(`O wins! Clearing Board for new game`)
-    clearBoard(board)
+    clearBoard()
   }
+  
     if(arr[0][0]+arr[1][0]+arr[1][0] === 300) {
     console.log(`O wins! Clearing Board for new game`)
-    clearBoard(board)
+    clearBoard()
   }
     if(arr[0][1]+arr[1][1]+arr[2][1] === 300) {
     console.log(`O wins! Clearing Board for new game`)
-    clearBoard(board)
+    clearBoard()
   }
-    if(arr[0][2]+arr[0][2]+arr[0][2] === 300) {
+    if(arr[0][2]+arr[1][2]+arr[2][2] === 300) {
     console.log(`O wins! Clearing Board for new game`)
-    clearBoard(board)
+    clearBoard()
   }
+  
+  
     if(arr[0][0]+arr[1][1]+arr[2][2] === 300) {
     console.log(`O wins! Clearing Board for new game`)
-    clearBoard(board)
+    clearBoard()
   }
     if(arr[0][2]+arr[1][1]+arr[2][0] === 300) {
     console.log(`O wins! Clearing Board for new game`)
-    clearBoard(board)
+    clearBoard()
   }
 }
 
@@ -113,8 +119,6 @@ const checkWin = (arr) => {
 place(4)
 place(0)
 place(1)
-clearBoard(board)
-console.log(board)
-place(4)
-
-
+place(3)
+place(8)
+place(6)
